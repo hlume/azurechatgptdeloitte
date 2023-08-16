@@ -8,6 +8,8 @@ import { ChatType, ConversationStyle, LLMModel } from "../chat-services/models";
 import { ChatModelSelector } from "./chat-model-selector";
 import { ChatStyleSelector } from "./chat-style-selector";
 import { ChatTypeSelector } from "./chat-type-selector";
+
+
 interface Prop {
   isUploadingFile: boolean;
   llmModel: LLMModel;
@@ -37,7 +39,7 @@ export const EmptyState: FC<Prop> = (props) => {
     props.onChatTypeChange(value);
   };
 
-  return (
+ return (
     <div className="grid grid-cols-5 w-full items-center container mx-auto max-w-3xl justify-center h-full gap-9">
       <div className="col-span-2 gap-5 flex flex-col flex-1">
         <Typography variant="h4" className="text-primary">
@@ -47,6 +49,15 @@ export const EmptyState: FC<Prop> = (props) => {
           Start by just typing your message in the box below. You can also
           personalise the chat by making changes to the settings on the right.
         </p>
+        <p>
+          You can also upload a document and then ask questions about it. It uses our Form Recognizer in order to extract the text from the document and cognitive search to store the embeddings created from the document.
+        </p>
+        <p>
+        <a href="https://raw.githubusercontent.com/cloud-sean/azurechatgpt/main/images/architecture.png" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>Click here</a> to see the architecture diagram.
+        </p>
+        
+
+        
       </div>
       <Card className="col-span-3 flex flex-col gap-5 p-5 ">
         <Typography variant="h4" className="text-primary">
@@ -70,7 +81,7 @@ export const EmptyState: FC<Prop> = (props) => {
             onChatStyleChange={props.onConversationStyleChange}
             disable={false}
           />
-        </div>
+        </div> 
         <div className="flex flex-col gap-2">
           <p className="text-sm text-muted-foreground">
             How would you like to chat?
