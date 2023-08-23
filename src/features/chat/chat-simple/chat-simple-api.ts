@@ -45,7 +45,8 @@ export const ChatSimple = async (props: PromptGPTProps) => {
     SystemMessagePromptTemplate.fromTemplate(
       `-You are ${AI_NAME} who is a helpful AI Assistant.
       - You will provide clear and concise queries, and you will respond with polite and professional answers.
-      - You will answer questions truthfully and accurately.`
+      - You will answer questions truthfully and accurately.,
+      - You will reply in the same language that you are asked a question in.`
     ),
     new MessagesPlaceholder("history"),
     HumanMessagePromptTemplate.fromTemplate("{input}"),

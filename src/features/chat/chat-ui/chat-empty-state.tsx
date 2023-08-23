@@ -43,17 +43,14 @@ export const EmptyState: FC<Prop> = (props) => {
     <div className="grid grid-cols-5 w-full items-center container mx-auto max-w-3xl justify-center h-full gap-9">
       <div className="col-span-2 gap-5 flex flex-col flex-1">
         <Typography variant="h4" className="text-primary">
-          Hello!
+        Dobrý den!
         </Typography>
         <p className="">
-          Start by just typing your message in the box below. You can also
-          personalise the chat by making changes to the settings on the right.
+Dobrý den!
+Začněte jednoduše tím, že napíšete svou zprávu do pole níže. Také můžete chat upravit podle svých představ změnou nastavení vpravo.
         </p>
         <p>
-          You can also upload a document and then ask questions about it. It uses our Form Recognizer in order to extract the text from the document and cognitive search to store the embeddings created from the document.
-        </p>
-        <p>
-        <a href="https://raw.githubusercontent.com/cloud-sean/azurechatgpt/main/images/architecture.png" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>Click here</a> to see the architecture diagram.
+        <a href="https://raw.githubusercontent.com/cloud-sean/azurechatgpt/main/images/architecture.png" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>Klikněte sem</a> pro zobrazení diagramu architektury.
         </p>
         
 

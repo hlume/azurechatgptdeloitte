@@ -79,7 +79,7 @@ const findRelevantDocuments = async (query: string, chatThreadId: string) => {
 };
 
 const defineSystemPrompt = () => {
-  const system_combine_template = `Given the following context and a question, create a final answer. 
+  const system_combine_template = `Given the following context and a question, create a final answer answer in the same language as you were asked in. 
   If the context is empty or If you don't know the answer, politely decline to answer the question. Don't try to make up an answer.
   ----------------
   context: {summaries}`;
